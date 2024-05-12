@@ -1,0 +1,598 @@
+[
+    {
+        "rank": 1,
+        "name": "_nepenthe_(司睿洋，尹昱钦，张泽文)",
+        "detail": {
+            "B": {
+                "tries": 0,
+                "time": 58
+            },
+            "C": {
+                "tries": 1,
+                "time": 110
+            },
+            "D": {
+                "tries": 1,
+                "time": 157
+            },
+            "E": {
+                "tries": 2,
+                "time": 93
+            },
+            "G": {
+                "tries": 0,
+                "time": 251
+            },
+            "H": {
+                "tries": 0,
+                "time": 184
+            },
+            "I": {
+                "tries": 0,
+                "time": 41
+            },
+            "J": {
+                "tries": 0,
+                "time": 29
+            },
+            "K": {
+                "tries": 3,
+                "time": 208
+            }
+        }
+    },
+    {
+        "rank": 2,
+        "name": "three_newbie(袁桦斌 杨毅霖 马骐荣)",
+        "detail": {
+            "B": {
+                "tries": 0,
+                "time": 50
+            },
+            "C": {
+                "tries": 3,
+                "time": 56
+            },
+            "D": {
+                "tries": 0,
+                "time": 120
+            },
+            "E": {
+                "tries": 2,
+                "time": 185
+            },
+            "G": {
+                "tries": 3,
+                "time": 191
+            },
+            "H": {
+                "tries": 0,
+                "time": 220
+            },
+            "I": {
+                "tries": 1,
+                "time": 101
+            },
+            "J": {
+                "tries": 1,
+                "time": 264
+            }
+        }
+    },
+    {
+        "rank": 3,
+        "name": "pair_Ac_Ac(陈杰祥 刘益铭 谢志宏)",
+        "detail": {
+            "B": {
+                "tries": 0,
+                "time": 61
+            },
+            "C": {
+                "tries": 7,
+                "time": 199
+            },
+            "D": {
+                "tries": 0,
+                "time": 51
+            },
+            "E": {
+                "tries": 4,
+                "time": 246
+            },
+            "G": {
+                "tries": 10,
+                "time": 226
+            },
+            "I": {
+                "tries": 0,
+                "time": 33
+            },
+            "J": {
+                "tries": 0,
+                "time": 135
+            },
+            "K": {
+                "tries": 2,
+                "time": 279
+            }
+        }
+    },
+    {
+        "rank": 4,
+        "name": "Joyeuse_Ordre(张颢龄 谢牧航 王若竹)",
+        "detail": {
+            "B": {
+                "tries": 0,
+                "time": 51
+            },
+            "C": {
+                "tries": 0,
+                "time": 130
+            },
+            "D": {
+                "tries": 3,
+                "time": 128
+            },
+            "E": {
+                "tries": 2,
+                "time": 203
+            },
+            "H": {
+                "tries": 0,
+                "time": 220
+            },
+            "I": {
+                "tries": 0,
+                "time": 36
+            },
+            "J": {
+                "tries": 2,
+                "time": 92
+            }
+        }
+    },
+    {
+        "rank": 5,
+        "name": "Bush_Gamma(安奕轩，谢楠，林米乐)",
+        "detail": {
+            "B": {
+                "tries": 0,
+                "time": 94
+            },
+            "C": {
+                "tries": 0,
+                "time": 158
+            },
+            "D": {
+                "tries": 0,
+                "time": 118
+            },
+            "E": {
+                "tries": 1,
+                "time": 199
+            },
+            "H": {
+                "tries": 1,
+                "time": 285
+            },
+            "I": {
+                "tries": 0,
+                "time": 39
+            },
+            "J": {
+                "tries": 1,
+                "time": 144
+            }
+        }
+    },
+    {
+        "rank": 6,
+        "name": "Liangsheng298(王昰妍，梁浩然，李鹏烁)",
+        "detail": {
+            "B": {
+                "tries": 0,
+                "time": 128
+            },
+            "C": {
+                "tries": 0,
+                "time": 165
+            },
+            "D": {
+                "tries": 0,
+                "time": 206
+            },
+            "E": {
+                "tries": 2,
+                "time": 263
+            },
+            "H": {
+                "tries": 2,
+                "time": 299
+            },
+            "I": {
+                "tries": 0,
+                "time": 134
+            },
+            "J": {
+                "tries": 0,
+                "time": 84
+            }
+        }
+    },
+    {
+        "rank": 7,
+        "name": "yidau(赵佳一 李天阳 黄嘉宇)",
+        "detail": {
+            "B": {
+                "tries": 0,
+                "time": 87
+            },
+            "C": {
+                "tries": 12,
+                "time": 275
+            },
+            "D": {
+                "tries": 1,
+                "time": 83
+            },
+            "E": {
+                "tries": 2,
+                "time": 211
+            },
+            "G": {
+                "tries": 4,
+                "time": 267
+            },
+            "I": {
+                "tries": 1,
+                "time": 100
+            },
+            "J": {
+                "tries": 0,
+                "time": 185
+            }
+        }
+    },
+    {
+        "rank": 8,
+        "name": "neetman(秦维斌,李泽林,安澍)",
+        "detail": {
+            "B": {
+                "tries": 0,
+                "time": 100
+            },
+            "C": {
+                "tries": 2,
+                "time": 113
+            },
+            "D": {
+                "tries": 0,
+                "time": 51
+            },
+            "H": {
+                "tries": 0,
+                "time": 152
+            },
+            "I": {
+                "tries": 1,
+                "time": 16
+            },
+            "J": {
+                "tries": 0,
+                "time": 93
+            }
+        }
+    },
+    {
+        "rank": 9,
+        "name": "Don_Quixote(卢安来，王冀恒，管庆涵)",
+        "detail": {
+            "B": {
+                "tries": 0,
+                "time": 16
+            },
+            "C": {
+                "tries": 6,
+                "time": 253
+            },
+            "D": {
+                "tries": 1,
+                "time": 73
+            },
+            "E": {
+                "tries": 4,
+                "time": 279
+            },
+            "I": {
+                "tries": 0,
+                "time": 48
+            },
+            "J": {
+                "tries": 1,
+                "time": 129
+            }
+        }
+    },
+    {
+        "rank": 10,
+        "name": "O_start(乔函祺 李思远 马铂凯)",
+        "detail": {
+            "B": {
+                "tries": 0,
+                "time": 60
+            },
+            "C": {
+                "tries": 4,
+                "time": 251
+            },
+            "D": {
+                "tries": 3,
+                "time": 185
+            },
+            "E": {
+                "tries": 0,
+                "time": 254
+            },
+            "I": {
+                "tries": 1,
+                "time": 61
+            },
+            "J": {
+                "tries": 0,
+                "time": 154
+            }
+        }
+    },
+    {
+        "rank": 11,
+        "name": "DP_PTSD(王垚烨 蒙忠格 黄志阳)",
+        "detail": {
+            "B": {
+                "tries": 0,
+                "time": 58
+            },
+            "C": {
+                "tries": 4,
+                "time": 178
+            },
+            "D": {
+                "tries": 0,
+                "time": 252
+            },
+            "E": {
+                "tries": 0,
+                "time": 295
+            },
+            "I": {
+                "tries": 0,
+                "time": 62
+            },
+            "J": {
+                "tries": 4,
+                "time": 216
+            }
+        }
+    },
+    {
+        "rank": 12,
+        "name": "zengwei1(曾巍 蔡禹煊 田苗)",
+        "detail": {
+            "B": {
+                "tries": 0,
+                "time": 60
+            },
+            "C": {
+                "tries": 14,
+                "time": 292
+            },
+            "D": {
+                "tries": 2,
+                "time": 107
+            },
+            "E": {
+                "tries": 7,
+                "time": 299
+            },
+            "I": {
+                "tries": 0,
+                "time": 77
+            },
+            "J": {
+                "tries": 1,
+                "time": 214
+            }
+        }
+    },
+    {
+        "rank": 13,
+        "name": "void_WarmUp(钱文韬 曾行周 徐衍巅)",
+        "detail": {
+            "B": {
+                "tries": 0,
+                "time": 49
+            },
+            "C": {
+                "tries": 7,
+                "time": 206
+            },
+            "D": {
+                "tries": 0,
+                "time": 117
+            },
+            "I": {
+                "tries": 0,
+                "time": 66
+            },
+            "J": {
+                "tries": 0,
+                "time": 218
+            }
+        }
+    },
+    {
+        "rank": 14,
+        "name": "4000g_Pt(冯国晟 于洋 马廷良)",
+        "detail": {
+            "B": {
+                "tries": 0,
+                "time": 92
+            },
+            "D": {
+                "tries": 0,
+                "time": 124
+            },
+            "E": {
+                "tries": 7,
+                "time": 280
+            },
+            "I": {
+                "tries": 1,
+                "time": 30
+            },
+            "J": {
+                "tries": 0,
+                "time": 198
+            }
+        }
+    },
+    {
+        "rank": 15,
+        "name": "UltraCat(王智炜 李博识 胡诚成)",
+        "detail": {
+            "B": {
+                "tries": 0,
+                "time": 50
+            },
+            "C": {
+                "tries": 4,
+                "time": 253
+            },
+            "D": {
+                "tries": 0,
+                "time": 145
+            },
+            "I": {
+                "tries": 1,
+                "time": 74
+            },
+            "J": {
+                "tries": 3,
+                "time": 235
+            }
+        }
+    },
+    {
+        "rank": 16,
+        "name": "Humgry(吴优 单一凡 金旭一)",
+        "detail": {
+            "B": {
+                "tries": 0,
+                "time": 84
+            },
+            "C": {
+                "tries": 4,
+                "time": 262
+            },
+            "D": {
+                "tries": 1,
+                "time": 146
+            },
+            "I": {
+                "tries": 0,
+                "time": 63
+            },
+            "J": {
+                "tries": 3,
+                "time": 226
+            }
+        }
+    },
+    {
+        "rank": 17,
+        "name": "nzot(张智成 李乐杨 赵瑞霖)",
+        "detail": {
+            "B": {
+                "tries": 0,
+                "time": 96
+            },
+            "C": {
+                "tries": 3,
+                "time": 204
+            },
+            "H": {
+                "tries": 1,
+                "time": 297
+            },
+            "I": {
+                "tries": 0,
+                "time": 114
+            },
+            "J": {
+                "tries": 1,
+                "time": 253
+            }
+        }
+    },
+    {
+        "rank": 18,
+        "name": "WeMissAcSoMuch(马云霄 侯尔为 刘奕安)",
+        "detail": {
+            "B": {
+                "tries": 0,
+                "time": 89
+            },
+            "D": {
+                "tries": 1,
+                "time": 128
+            },
+            "I": {
+                "tries": 0,
+                "time": 41
+            },
+            "J": {
+                "tries": 2,
+                "time": 255
+            }
+        }
+    },
+    {
+        "rank": 19,
+        "name": "err_Grade(李子俊 王华德 田艺彬)",
+        "detail": {
+            "B": {
+                "tries": 0,
+                "time": 73
+            },
+            "D": {
+                "tries": 1,
+                "time": 190
+            },
+            "I": {
+                "tries": 6,
+                "time": 262
+            },
+            "J": {
+                "tries": 1,
+                "time": 218
+            }
+        }
+    },
+    {
+        "rank": 20,
+        "name": "A_Duiduidui(陈育堃,朱瑞)",
+        "detail": {
+            "B": {
+                "tries": 0,
+                "time": 133
+            },
+            "D": {
+                "tries": 2,
+                "time": 195
+            },
+            "I": {
+                "tries": 0,
+                "time": 47
+            }
+        }
+    }
+]

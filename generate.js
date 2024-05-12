@@ -40,48 +40,73 @@ function load(contest) {
 
 
   const buptHDU = {
-    "team401": "打完去超市买点东西吃",
-    "team402": "三个菜鸟",
-    "team403": "野鸡大队",
-    "team404": "来了去了",
-    "team405": "鹰之一手",
-    "team406": "未闻队名",
-    "team407": "奥特猫",
-    "team408": "最佳柴郡",
-    "team409": "逆转结局",
-    "team410": "字节御宅族",
-    "team411": "你们队得过什么奖",
-    "team412": "默认用户名",
-    "team413": "啊对对队",
-    "team414": "左右魔性穿梭",
-    "team415": "再做一道就开摆",
-    "team416": "六目相对",
-    "team417": "我有起名困难症",
-    "team418": "你说的队",
-    "team419": "三只蒟蒻",
-    "team1051": "未命名-1",
+    "team401": "摩可彭塔斯",
+    "team402": "网瘾犯了求求你把牌子给我",
+    "team403": "彰显王威吧，踏遍世间的十二辉剑！",
+    "team404": "遥遥领先于友队",
+    "team405": "好好想想队",
+    "team406": "堂吉诃德",
+    "team407": "帮帮我，评测机老爷爷！",
+    "team408": "三个臭皮匠",
+    "team409": "如果爆零能报销回家车费吗",
+    "team410": "试者如斯夫，不舍昼夜",
+    "team411": "华为手机",
+    "team412": "嘉然今天吃汉堡",
+    "team413": "我宣布以上成绩无效",
+    "team414": "歪日，这么虾头？",
+    "team415": "啊对对队",
+    "team416": "金牌厨师",
+    "team417": "DP_PTSD",
+    "team418": "吃堡没吃饱",
+    "team419": "我太想AC了",
+    "team420": "4000g_Pt",
+    "team421": "对了没？如队",
   }
-  buptNC = {
-    "team401": "打完去超市买点东西吃",
-    "team402": "三个菜鸟_",
-    "team403": "野鸡大队",
-    "team404": "来了去了",
-    "team405": "OneHandofWarhawks",
-    "team406": "UnnamedTeam",
-    "team407": "UltraCat",
-    "team408": "最佳柴郡",
-    "team409": "ReverseEnding",
-    "team410": "字节御宅族ByteOtakus",
-    "team411": "你们队得过什么奖",
-    "team412": "默认用户名",
-    "team413": "Ah对对对队",
-    "team414": "左右魔性穿梭队",
-    "team415": "再做一道就开摆",
-    "team416": "六目相对",
-    "team417": "我有起名困难症",
-    "team418": "BUPT-你说的队",
-    "team419": "三只蒟蒻_threekonjaks",
-    "team1051": "未命名-1",
+  const buptNC = {
+    "team401": "摩可彭塔斯",
+    "team402": "网瘾犯了求求你把牌子给我",
+    "team403": "彰显王威吧，踏遍世间的十二辉剑！",
+    "team404": "遥遥领先于友队",
+    "team405": "好好想想队",
+    "team406": "堂吉诃德",
+    "team407": "帮帮我，评测机老爷爷！",
+    "team408": "三个臭皮匠",
+    "team409": "如果爆零能报销回家车费吗",
+    "team410": "试者如斯夫，不舍昼夜",
+    "team411": "华为手机",
+    "team412": "嘉然今天吃汉堡",
+    "team413": "我宣布以上成绩无效",
+    "team414": "歪日，这么虾头？",
+    "team415": "啊对对队",
+    "team416": "金牌厨师",
+    "team417": "DP_PTSD",
+    "team418": "吃堡没吃饱",
+    "team419": "我太想AC了",
+    "team420": "4000g_Pt",
+    "team421": "对了没？如队",
+  }
+  const buptVJ = {
+    "team401": "摩可彭塔斯",
+    "team402": "pair_Ac_Ac",
+    "team403": "Joyeuse_Ordre",
+    "team404": "Liangsheng298",
+    "team405": "_nepenthe_",
+    "team406": "Don_Quixote",
+    "team407": "zengwei1",
+    "team408": "three_newbie",
+    "team409": "yidau",
+    "team410": "neetman",
+    "team411": "nzot",
+    "team412": "UltraCat",
+    "team413": "err_Grade",
+    "team414": "Bush_Gamma",
+    "team415": "A_Duiduidui",
+    "team416": "O_start",
+    "team417": "DP_PTSD",
+    "team418": "Humgry",
+    "team419": "WeMissAcSoMuch",
+    "team420": "4000g_Pt",
+    "team421": "void_WarmUp",
   }
   let hi = -1;
   for (let i in data) {
@@ -116,6 +141,12 @@ function load(contest) {
       //  item.name = buptHDU[item.name];
     }
 
+    if (contest.indexOf("vj") != -1) {
+      item.school = "北京邮电大学";
+      item.name = (item.name.split('('))[0];
+    }
+    console.log(item.name, item.school);
+
     if (Object.values(buptHDU).includes(item.name)&&item.school=="北京邮电大学") {
       teams.add(item.name);
       teamStats[contest][item.name] = `${item.rank}/${cnt}/${score.toFixed(2)}`;
@@ -138,6 +169,32 @@ function load(contest) {
       let HDUname = "";
       for (let key in buptNC) {
         if (buptNC[key] == item.name) {
+          HDUname = buptHDU[key];
+        }
+      }
+      // if(item.name=="UnnamedTeam") console.log(HDUname,item.rank);
+      teams.add(HDUname);
+      teamStats[contest][HDUname] = `${item.rank}/${cnt}/${score.toFixed(2)}`;
+      // if(item.name=="UnnamedTeam") console.log(teamStats[contest][HDUname]);
+      let found = false;
+      for (let t of tableData)
+        if (t.name == HDUname) {
+          found = true;
+          scores[HDUname].push(parseFloat(score.toFixed(2)));
+        }
+      // if(item.name=="UnnamedTeam") console.log(scores[HDUname],parseFloat(score.toFixed(2)));
+      if (!found) {
+        scores[HDUname] = [];
+        for (let i = 0; i < conts.length - 1; ++i)
+          scores[HDUname].push(0);
+        scores[HDUname].push(parseFloat(score.toFixed(2)));
+        tableData.push({ "name": HDUname, "type": "line", "data": scores[HDUname], "markLine": { "data": [{ "type": "average", "name": "平均值" }] } });
+      }
+    } else if (Object.values(buptVJ).includes(item.name)&&item.school=="北京邮电大学") {
+      // Find the item.name in buptHDU which is the same team
+      let HDUname = "";
+      for (let key in buptVJ) {
+        if (buptVJ[key] == item.name) {
           HDUname = buptHDU[key];
         }
       }

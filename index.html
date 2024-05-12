@@ -8,7 +8,7 @@
 </head>
 
 <body>
-  <h1>2023 Summer Training</h1>
+  <h1>2024 Spring Training</h1>
   <h1>表中数据为(排名/题数/得分)</h1>
   <table style="padding: 20px;">
     <tbody id="ranking"></tbody>
@@ -16,7 +16,7 @@
   <div id="chart" style="width: 1000px;height:1000px;"></div>
   <script>
     $.get(
-      "/stat.json",
+      "./stat.json",
       {},
       function (data) {
         const COUNT = Math.ceil(data.conts.length * 15 / 20);

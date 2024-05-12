@@ -1,6 +1,48 @@
 [
     {
         "rank": 1,
+        "name": "mocopentas(区庆亮 鲍睿钊 谭怡萱)",
+        "detail": {
+            "B": {
+                "tries": 0,
+                "time": 58
+            },
+            "C": {
+                "tries": 1,
+                "time": 110
+            },
+            "D": {
+                "tries": 1,
+                "time": 157
+            },
+            "E": {
+                "tries": 2,
+                "time": 93
+            },
+            "G": {
+                "tries": 0,
+                "time": 251
+            },
+            "H": {
+                "tries": 0,
+                "time": 184
+            },
+            "I": {
+                "tries": 0,
+                "time": 41
+            },
+            "J": {
+                "tries": 0,
+                "time": 29
+            },
+            "L": {
+                "tries": 3,
+                "time": 208
+            }
+        }
+    },
+    {
+        "rank": 2,
         "name": "_nepenthe_(司睿洋，尹昱钦，张泽文)",
         "detail": {
             "B": {
@@ -42,7 +84,7 @@
         }
     },
     {
-        "rank": 2,
+        "rank": 3,
         "name": "three_newbie(袁桦斌 杨毅霖 马骐荣)",
         "detail": {
             "B": {
@@ -80,7 +122,7 @@
         }
     },
     {
-        "rank": 3,
+        "rank": 4,
         "name": "pair_Ac_Ac(陈杰祥 刘益铭 谢志宏)",
         "detail": {
             "B": {
@@ -118,7 +160,7 @@
         }
     },
     {
-        "rank": 4,
+        "rank": 5,
         "name": "Joyeuse_Ordre(张颢龄 谢牧航 王若竹)",
         "detail": {
             "B": {
@@ -152,7 +194,7 @@
         }
     },
     {
-        "rank": 5,
+        "rank": 6,
         "name": "Bush_Gamma(安奕轩，谢楠，林米乐)",
         "detail": {
             "B": {
@@ -186,7 +228,7 @@
         }
     },
     {
-        "rank": 6,
+        "rank": 7,
         "name": "Liangsheng298(王昰妍，梁浩然，李鹏烁)",
         "detail": {
             "B": {
@@ -220,7 +262,7 @@
         }
     },
     {
-        "rank": 7,
+        "rank": 8,
         "name": "yidau(赵佳一 李天阳 黄嘉宇)",
         "detail": {
             "B": {
@@ -254,7 +296,7 @@
         }
     },
     {
-        "rank": 8,
+        "rank": 9,
         "name": "neetman(秦维斌,李泽林,安澍)",
         "detail": {
             "B": {
@@ -284,7 +326,7 @@
         }
     },
     {
-        "rank": 9,
+        "rank": 10,
         "name": "Don_Quixote(卢安来，王冀恒，管庆涵)",
         "detail": {
             "B": {
@@ -314,7 +356,7 @@
         }
     },
     {
-        "rank": 10,
+        "rank": 11,
         "name": "O_start(乔函祺 李思远 马铂凯)",
         "detail": {
             "B": {
@@ -344,7 +386,7 @@
         }
     },
     {
-        "rank": 11,
+        "rank": 12,
         "name": "DP_PTSD(王垚烨 蒙忠格 黄志阳)",
         "detail": {
             "B": {
@@ -374,7 +416,7 @@
         }
     },
     {
-        "rank": 12,
+        "rank": 13,
         "name": "zengwei1(曾巍 蔡禹煊 田苗)",
         "detail": {
             "B": {
@@ -404,7 +446,7 @@
         }
     },
     {
-        "rank": 13,
+        "rank": 14,
         "name": "void_WarmUp(钱文韬 曾行周 徐衍巅)",
         "detail": {
             "B": {
@@ -430,7 +472,7 @@
         }
     },
     {
-        "rank": 14,
+        "rank": 15,
         "name": "4000g_Pt(冯国晟 于洋 马廷良)",
         "detail": {
             "B": {
@@ -456,7 +498,7 @@
         }
     },
     {
-        "rank": 15,
+        "rank": 16,
         "name": "UltraCat(王智炜 李博识 胡诚成)",
         "detail": {
             "B": {
@@ -482,7 +524,7 @@
         }
     },
     {
-        "rank": 16,
+        "rank": 17,
         "name": "Humgry(吴优 单一凡 金旭一)",
         "detail": {
             "B": {
@@ -508,7 +550,7 @@
         }
     },
     {
-        "rank": 17,
+        "rank": 18,
         "name": "nzot(张智成 李乐杨 赵瑞霖)",
         "detail": {
             "B": {
@@ -534,7 +576,7 @@
         }
     },
     {
-        "rank": 18,
+        "rank": 19,
         "name": "WeMissAcSoMuch(马云霄 侯尔为 刘奕安)",
         "detail": {
             "B": {
@@ -556,7 +598,7 @@
         }
     },
     {
-        "rank": 19,
+        "rank": 20,
         "name": "err_Grade(李子俊 王华德 田艺彬)",
         "detail": {
             "B": {
@@ -578,7 +620,7 @@
         }
     },
     {
-        "rank": 20,
+        "rank": 21,
         "name": "A_Duiduidui(陈育堃,朱瑞)",
         "detail": {
             "B": {

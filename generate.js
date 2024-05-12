@@ -13,30 +13,37 @@ function load(contest) {
   let data = JSON.parse(fs.readFileSync(`./contests/${contest}.json`));
   let probCount = 0;
   let acc = {}
+  let maxSovled = 0;
+  let teamsCount = 0;
   while (String.fromCharCode(probCount + 'A'.charCodeAt(0)) in data[0].detail) {
     acc[String.fromCharCode(probCount + 'A'.charCodeAt(0))] = 0;
     probCount++;
   }
 
   for (let item of data) {
+    let solved = 0;
     for (let prob in item.detail) {
       if (item.detail[prob].time != -1)
         acc[prob] += 1;
+        solved += 1;
     }
+    maxSovled = Math.max(maxSovled, solved);
+    if (solved > 0)
+      teamsCount += 1;
   }
 
-  let cnt200 = 0;
-
-  for (let i in data) {
-    if (i == "200")
-      break;
-
-    let item = data[i];
-    for (let prob in item.detail) {
-      if (item.detail[prob].time != -1)
-        cnt200 += 1;
-    }
-  }
+  // let cnt200 = 0;
+// 
+  // for (let i in data) {
+  //   if (i == "200")
+  //     break;
+// 
+  //   let item = data[i];
+  //   for (let prob in item.detail) {
+  //     if (item.detail[prob].time != -1)
+  //       cnt200 += 1;
+  //   }
+  // }
 
 
   const buptHDU = {
@@ -86,7 +93,7 @@ function load(contest) {
     "team421": "对了没？如队",
   }
   const buptVJ = {
-    "team401": "摩可彭塔斯",
+    "team401": "mocopentas",
     "team402": "pair_Ac_Ac",
     "team403": "Joyeuse_Ordre",
     "team404": "Liangsheng298",
@@ -111,15 +118,17 @@ function load(contest) {
   let hi = -1;
   for (let i in data) {
     let item = data[i];
+    let rank = parseInt(item.rank);
     let cnt = 0;
     for (let prob in item.detail) {
       if (item.detail[prob].time != -1)
         cnt += 1;
     }
-    let score = Math.max(0, cnt / cnt200 * (500 - parseInt(item.rank)));
-    if (hi == -1)
-      hi = score;
-    score = score / hi * 100;
+    // let score = Math.max(0, cnt / cnt200 * (500 - parseInt(item.rank)));
+    // if (hi == -1)
+    //   hi = score;
+    // score = score / hi * 100;
+    let score = Math.max(0, 100 * cnt / maxSovled * ((teamsCount - rank + 1) / teamsCount)); // 2024 春季训练计分方式
     if (contest.indexOf("hd") != -1) {
       item.school = (item.name.split('   '))[1];
       item.name = (item.name.split('   '))[0];
@@ -145,7 +154,7 @@ function load(contest) {
       item.school = "北京邮电大学";
       item.name = (item.name.split('('))[0];
     }
-    console.log(item.name, item.school);
+    // console.log(item.name, item.school);
 
     if (Object.values(buptHDU).includes(item.name)&&item.school=="北京邮电大学") {
       teams.add(item.name);

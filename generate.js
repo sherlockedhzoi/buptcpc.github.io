@@ -13,7 +13,7 @@ function load(contest) {
   let data = JSON.parse(fs.readFileSync(`./contests/${contest}.json`));
   let probCount = 0;
   let acc = {}
-  let maxSovled = 0;
+  let maxSolved = 0;
   let teamsCount = 0;
   while (String.fromCharCode(probCount + 'A'.charCodeAt(0)) in data[0].detail) {
     acc[String.fromCharCode(probCount + 'A'.charCodeAt(0))] = 0;
@@ -27,7 +27,7 @@ function load(contest) {
         acc[prob] += 1;
         solved += 1;
     }
-    maxSovled = Math.max(maxSovled, solved);
+    maxSolved = Math.max(maxSolved, solved);
     if (solved > 0)
       teamsCount += 1;
   }
@@ -44,7 +44,19 @@ function load(contest) {
   //       cnt200 += 1;
   //   }
   // }
-
+  
+  const teamsNumber = {
+    "vj6" : 82,
+    "vj8" : 42,
+    "vj9" : 244,
+    "vj10" : 250,
+    "vj11" : 183,
+    "vj12" : 198,
+  }
+  
+  teamsCount = teamsNumber[contest];
+  
+  console.log(contest, maxSolved, teamsCount);
 
   const buptHDU = {
     "team401": "摩可彭塔斯",
@@ -128,7 +140,7 @@ function load(contest) {
     // if (hi == -1)
     //   hi = score;
     // score = score / hi * 100;
-    let score = Math.max(0, 100 * cnt / maxSovled * ((teamsCount - rank + 1) / teamsCount)); // 2024 春季训练计分方式
+    let score = Math.max(0, 100 * cnt / maxSolved * ((teamsCount - rank + 1) / teamsCount)); // 2024 春季训练计分方式
     if (contest.indexOf("hd") != -1) {
       item.school = (item.name.split('   '))[1];
       item.name = (item.name.split('   '))[0];
@@ -156,75 +168,45 @@ function load(contest) {
     }
     // console.log(item.name, item.school);
 
+    let HDUname = "";
     if (Object.values(buptHDU).includes(item.name)&&item.school=="北京邮电大学") {
-      teams.add(item.name);
-      teamStats[contest][item.name] = `${item.rank}/${cnt}/${score.toFixed(2)}`;
-      let found = false;
-      for (let t of tableData)
-        if (t.name == item.name) {
-          found = true;
-          scores[item.name].push(parseFloat(score.toFixed(2)));
-        }
-      if (!found) {
-        scores[item.name] = [];
-        for (let i = 0; i < conts.length - 1; ++i)
-          scores[item.name].push(0);
-        scores[item.name].push(parseFloat(score.toFixed(2)));
-        tableData.push({ "name": item.name, "type": "line", "data": scores[item.name], "markLine": { "data": [{ "type": "average", "name": "平均值" }] } });
-      }
+      HDUname = item.name;
     }
     else if (Object.values(buptNC).includes(item.name)&&item.school=="北京邮电大学") {
-      // Find the item.name in buptHDU which is the same team
-      let HDUname = "";
+
       for (let key in buptNC) {
         if (buptNC[key] == item.name) {
           HDUname = buptHDU[key];
         }
       }
-      // if(item.name=="UnnamedTeam") console.log(HDUname,item.rank);
-      teams.add(HDUname);
-      teamStats[contest][HDUname] = `${item.rank}/${cnt}/${score.toFixed(2)}`;
-      // if(item.name=="UnnamedTeam") console.log(teamStats[contest][HDUname]);
-      let found = false;
-      for (let t of tableData)
-        if (t.name == HDUname) {
-          found = true;
-          scores[HDUname].push(parseFloat(score.toFixed(2)));
-        }
-      // if(item.name=="UnnamedTeam") console.log(scores[HDUname],parseFloat(score.toFixed(2)));
-      if (!found) {
-        scores[HDUname] = [];
-        for (let i = 0; i < conts.length - 1; ++i)
-          scores[HDUname].push(0);
-        scores[HDUname].push(parseFloat(score.toFixed(2)));
-        tableData.push({ "name": HDUname, "type": "line", "data": scores[HDUname], "markLine": { "data": [{ "type": "average", "name": "平均值" }] } });
-      }
-    } else if (Object.values(buptVJ).includes(item.name)&&item.school=="北京邮电大学") {
-      // Find the item.name in buptHDU which is the same team
-      let HDUname = "";
+    }
+    else if (Object.values(buptVJ).includes(item.name)) {
+      item.school = "北京邮电大学";
       for (let key in buptVJ) {
         if (buptVJ[key] == item.name) {
           HDUname = buptHDU[key];
         }
       }
-      // if(item.name=="UnnamedTeam") console.log(HDUname,item.rank);
-      teams.add(HDUname);
-      teamStats[contest][HDUname] = `${item.rank}/${cnt}/${score.toFixed(2)}`;
-      // if(item.name=="UnnamedTeam") console.log(teamStats[contest][HDUname]);
-      let found = false;
-      for (let t of tableData)
-        if (t.name == HDUname) {
-          found = true;
-          scores[HDUname].push(parseFloat(score.toFixed(2)));
-        }
-      // if(item.name=="UnnamedTeam") console.log(scores[HDUname],parseFloat(score.toFixed(2)));
-      if (!found) {
-        scores[HDUname] = [];
-        for (let i = 0; i < conts.length - 1; ++i)
-          scores[HDUname].push(0);
+    }
+
+    if (HDUname == "") {
+      continue;
+    }
+
+    teams.add(HDUname);
+    teamStats[contest][HDUname] = `${item.rank}/${cnt}/${score.toFixed(2)}`;
+    let found = false;
+    for (let t of tableData)
+      if (t.name == HDUname) {
+        found = true;
         scores[HDUname].push(parseFloat(score.toFixed(2)));
-        tableData.push({ "name": HDUname, "type": "line", "data": scores[HDUname], "markLine": { "data": [{ "type": "average", "name": "平均值" }] } });
       }
+    if (!found) {
+      scores[HDUname] = [];
+      for (let i = 0; i < conts.length - 1; ++i)
+        scores[HDUname].push(0);
+      scores[HDUname].push(parseFloat(score.toFixed(2)));
+      tableData.push({ "name": HDUname, "type": "line", "data": scores[HDUname], "markLine": { "data": [{ "type": "average", "name": "平均值" }] } });
     }
   }
 

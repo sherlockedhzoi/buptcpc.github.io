@@ -54,4 +54,4 @@ function search_contests(keyword) {
 
 // work(cid)
 
-search_contests("2023牛客暑期多校训练营")
+search_contests("2024牛客暑期多校训练营")

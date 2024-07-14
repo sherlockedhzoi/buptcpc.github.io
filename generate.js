@@ -54,7 +54,9 @@ function load(contest) {
     "vj12" : 198,
   }
   
-  teamsCount = teamsNumber[contest];
+  if (contest.contains("vj")) {
+    teamsCount = teamsNumber[contest];
+  }
   
   console.log(contest, maxSolved, teamsCount);
 
@@ -151,29 +153,23 @@ function load(contest) {
     if (contest.indexOf("cc") != -1) {
       item.school = (item.name.split(' '))[2];
       item.name = (item.name.split(' '))[1];
-      //if (item.name in buptHDU)
-      //  item.name = buptHDU[item.name];
     }
 
     if (contest.indexOf("ic") != -1) {
       item.school = (item.name.split(' '))[0];
       item.name = (item.name.split(' '))[1];
-      //if (item.name in buptHDU)
-      //  item.name = buptHDU[item.name];
     }
 
     if (contest.indexOf("vj") != -1) {
       item.school = "北京邮电大学";
       item.name = (item.name.split('('))[0];
     }
-    // console.log(item.name, item.school);
 
     let HDUname = "";
     if (Object.values(buptHDU).includes(item.name)&&item.school=="北京邮电大学") {
       HDUname = item.name;
     }
     else if (Object.values(buptNC).includes(item.name)&&item.school=="北京邮电大学") {
-
       for (let key in buptNC) {
         if (buptNC[key] == item.name) {
           HDUname = buptHDU[key];
@@ -218,8 +214,14 @@ function load(contest) {
 
 let arr = fs.readdirSync('./contests');
 
+const legal_contests = ['vj6', 'vj8', 'vj9', 'vj10', 'vj11', 'vj12', 'hd3', 'hd4', 'hd5', 'hd6', 'hd7', 'hd8', 'hd9', 'hd10', 'nc3', 'nc4', 'nc5', 'nc6', 'nc7', 'nc8', 'nc9', 'nc10']
+
 for (let i of arr) {
-  load(i.split('.')[0]);
+  contest_name = i.split('.')[0];
+  if (!legal_contests.includes(contest_name)) {
+    continue;
+  }
+  load(contest_name);
   console.log(i.split('.')[0], " generated.")
 }
 

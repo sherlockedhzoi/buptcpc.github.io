@@ -54,7 +54,7 @@ function load(contest) {
     "vj12" : 198,
   }
   
-  if (contest.contains("vj")) {
+  if (contest.indexOf("vj")) {
     teamsCount = teamsNumber[contest];
   }
   

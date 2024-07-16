@@ -54,7 +54,7 @@ function load(contest) {
     "vj12" : 198,
   }
   
-  if (contest.indexOf("vj")) {
+  if (contest.indexOf("vj") != -1) {
     teamsCount = teamsNumber[contest];
   }
   
@@ -138,11 +138,15 @@ function load(contest) {
       if (item.detail[prob].time != -1)
         cnt += 1;
     }
-    // let score = Math.max(0, cnt / cnt200 * (500 - parseInt(item.rank)));
-    // if (hi == -1)
-    //   hi = score;
-    // score = score / hi * 100;
-    let score = Math.max(0, 100 * cnt / maxSolved * ((teamsCount - rank + 1) / teamsCount)); // 2024 春季训练计分方式
+    let score = Math.max(0, cnt * (500 - parseInt(item.rank)));
+    if (hi == -1)
+      hi = score;
+    score = score / hi * 100;
+    
+    if (contest.indexOf("vj") != -1) {
+      score = Math.max(0, 100 * cnt / maxSolved * ((teamsCount - rank + 1) / teamsCount)); // 2024 春季训练计分方式
+    }
+
     if (contest.indexOf("hd") != -1) {
       item.school = (item.name.split('   '))[1];
       item.name = (item.name.split('   '))[0];

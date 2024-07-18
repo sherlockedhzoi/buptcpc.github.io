@@ -2,7 +2,7 @@ const axios = require('axios');
 const fs = require('fs')
 const config = require("./config.json")
 
-let all = [], ALL = 18
+let all = [], ALL = 32
 
 async function work(cid, index) {
   let ranks = {}, i = 0

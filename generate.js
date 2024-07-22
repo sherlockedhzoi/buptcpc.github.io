@@ -215,7 +215,7 @@ function load(contest) {
 
 let arr = fs.readdirSync('./contests');
 
-const legal_contests = ['vj6', 'vj8', 'vj9', 'vj10', 'vj11', 'vj12', 'hd1', 'hd2', 'hd3', 'hd4', 'hd5', 'hd6', 'hd7', 'hd8', 'hd9', 'hd10', 'nc1', 'nc2', 'nc3', 'nc4', 'nc5', 'nc6', 'nc7', 'nc8', 'nc9', 'nc10']
+const legal_contests = [/*'vj6', 'vj8', 'vj9', 'vj10', 'vj11', 'vj12', 'hd1', */'hd2', 'hd3', 'hd4', 'hd5', 'hd6', 'hd7', 'hd8', 'hd9', 'hd10', /*'nc1', 'nc2',*/ 'nc3', 'nc4', 'nc5', 'nc6', 'nc7', 'nc8', 'nc9', 'nc10']
 
 for (let i of arr) {
   contest_name = i.split('.')[0];

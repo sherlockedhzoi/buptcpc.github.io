@@ -26,10 +26,10 @@ jobs:
       with:
         python-version: '3.11'
 
-    - name: install nodejs
-      uses: actions/setup-node@v2
-      with:
-        node-version: '18'
+    # - name: install nodejs
+    #   uses: actions/setup-node@v2
+    #   with:
+    #     node-version: '18'
 
     - name: install dependencies
       shell: bash
@@ -42,7 +42,7 @@ jobs:
     - name: update contest data
       shell: bash
       run: |
-        bash ./main.sh ${{ secrets.HDU_USERNAME }} ${{ secrets.HDU_PASSWORD }}
+        bash ./src/main.sh ${{ secrets.HDU_USERNAME }} ${{ secrets.HDU_PASSWORD }}
 
     - name: commit changes
       shell: bash

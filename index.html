@@ -60,7 +60,7 @@
             {},
             function (data) {
                 // Combine the contests
-                allData.conts = [...new Set([...allData.conts, ...data.conts])];
+                allData.conts = [...new Set([...allData.conts, ...data.conts])].sort(); // TODO 按时间排序
 
                 // Combine the teams
                 allData.teams = [...new Set([...allData.teams, ...data.teams])];

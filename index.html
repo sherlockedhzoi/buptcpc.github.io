@@ -17,15 +17,15 @@
   <script>
     const jsonFiles = [
         {
-            file: './data/spring_stat.json',
+            file: 'data/spring_stat.json',
             ratio: 0.1
         },
         {
-            file: './data/month_stat.json',
+            file: 'data/month_stat.json',
             ratio: 0.05
         },
         {
-            file: './data/summer_stat.json',
+            file: 'data/summer_stat.json',
             ratio: 0.85
         }
     ];
@@ -43,7 +43,6 @@
 
     function add(team, score){
         for(var x in arr){
-            console.log(arr[x].name, team, x.name == team, x.name === team)
             if(arr[x].name == team){
                 arr[x].score += score;
                 return;

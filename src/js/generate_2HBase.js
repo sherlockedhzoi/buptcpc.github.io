@@ -85,7 +85,7 @@ function load(contest) {
     "team403": "野鸡大队",
     "team404": "来了去了",
     "team405": "OneHandofWarhawks",
-    "team406": "Unnamed Team",
+    "team406": "UnnamedTeam",
     "team407": "UltraCat",
     "team408": "最佳柴郡",
     "team409": "ReverseEnding",
